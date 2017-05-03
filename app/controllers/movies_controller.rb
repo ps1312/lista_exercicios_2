@@ -36,7 +36,7 @@ class MoviesController < ApplicationController
     else
       @sort_by = session[:saved_sort]
     end
-    
+
     @movies = Movie.where(:rating => @selected_ratings).order(@sort_by)
   end
 
